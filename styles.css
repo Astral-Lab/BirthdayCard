@@ -45,7 +45,7 @@ header {
 
 main {
     font-size: 1.5rem;
-    margin-top: 2.5em;
+    margin-top: 20%;
 }
 
 main div.animContainer:last-child {
@@ -79,7 +79,7 @@ footer .animContainer:nth-child(2) .hidden {
 
 
 footer {
-    margin-top: 5em;
+    margin-top: 30%;
     font-size: 1.5rem;
 }
 
