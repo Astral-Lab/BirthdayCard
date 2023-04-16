@@ -127,7 +127,7 @@ footer .hidden {
     width: fit-content;
     padding: 0.2em;
     opacity: 0.10;
-    line-height: 1;
+    line-height: 0.8;
 }
 
 .FNGContainer {
