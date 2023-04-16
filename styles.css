@@ -17,6 +17,7 @@ body {
   width: 100%;
   height: 100vh;
   font-family: 'Apex', cursive;
+  font-family: 'Fugaz One';
   font-size: 1rem;
   overflow-x: hidden;
   letter-spacing: 0.2em;
@@ -39,22 +40,30 @@ main {
 }
 
 main div.animContainer:last-child {
-    margin-top: 1.5em;
+    margin-top: 3em;
 }
 
+main .hidden {
+    animation-delay: 1s;
+}
 
 footer {
-    margin-top: 3em;
-    font-size: 1.15rem;
+    margin-top: 5em;
+    font-size: 1.5rem;
 }
 
-footer div.animContainer:last-child {
-    margin-top: 1.5em;
+footer .animContainer:last-child {
+    margin-top: 3.25em;
+    font-size: 1.25rem;
+}
+
+footer .hidden {
+    animation-delay: 2s;
 }
 
 .animContainer {
     position: relative;
-    animation: slide 3s;
+    animation: slide 600s;
     width: fit-content;
 }
 
@@ -62,24 +71,29 @@ footer div.animContainer:last-child {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
 }
 
-.hiden {
+.hidden {
     background: white;
-    animation: reveal 6s;
+    animation: reveal 600s;
+    z-index: 999;
 }
 
 @keyframes slide {
-    from {
+    0% {
         transform: translateX(100vw);
+    }
+    0.33%, 100% {
+        transform: translateX(0);
     }
 }
 
 @keyframes reveal {
-    0%, 50% {
+    0%, 0.33% {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
-    100% {
+    0.67%, 100% {
         clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
     }   
 }
