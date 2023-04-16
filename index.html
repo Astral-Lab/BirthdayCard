@@ -44,13 +44,14 @@
             </div>
         </footer>
     </div>
+    <div class="FNGContainer"></div>
     <script>
-        const windowWidth = window.innerWidth;
+        const windowWidth = 375;
         const windowHeight = window.innerHeight;
         const columns = 3;
         const text = "FNG";
-        const fontSize = Math.ceil(windowWidth / (columns * text.length));
-        console.log(windowWidth)
+        const fontSize = Math.floor(windowWidth / (columns * text.length));
+        console.log("window width: ", windowWidth)
 
         for(let i = 0; i < columns; i++) {
             for(let i = 0; i < Math.floor(windowHeight / fontSize); i++) {
@@ -58,9 +59,7 @@
                 FNGDiv.style.fontSize = `${fontSize}px`;
                 FNGDiv.innerText = "FNG";;
                 FNGDiv.classList.add("fng");
-                //document.querySelector(".container").appendChild(FNGDiv);
-                document.body.appendChild(FNGDiv)
-                console.log(FNGDiv.offsetWidth);
+                document.querySelector(".FNGContainer").appendChild(FNGDiv);
             }
         }
     </script>
