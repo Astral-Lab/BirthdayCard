@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+@font-face {
+    font-family: 'Apex';
+    src: url('/Apex\ Regular.otf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: white;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Apex', cursive;
+  font-size: 1rem;
+  overflow-x: hidden;
+  letter-spacing: 0.2em;
+}
+
+.container {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+header {
+    font-size: 2.25rem;
+}
+
+main {
+    font-size: 1.5rem;
+    margin-top: 2.5em;
+}
+
+main div.animContainer:last-child {
+    margin-top: 1.5em;
+}
+
+
+footer {
+    margin-top: 3em;
+    font-size: 1.15rem;
+}
+
+footer div.animContainer:last-child {
+    margin-top: 1.5em;
+    color: blue
+}
+
+.animContainer {
+    position: relative;
+    animation: slide 3s;
+    width: fit-content;
+}
+
+.description {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hiden {
+    background: white;
+    animation: reveal 6s;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes reveal {
+    0%, 50% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    100% {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }   
+}
