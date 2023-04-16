@@ -28,6 +28,8 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
+  top: 0;
+  left: 0;
 }
 
 header {
@@ -118,4 +120,11 @@ footer .hidden {
     0.67%, 100% {
         clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
     }   
+}
+
+.fng {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.2em;
+    opacity: 0.15
 }
